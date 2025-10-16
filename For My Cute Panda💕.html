@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Be Mine Forever? ❤</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0e6fa, #e0f2f7);
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      font-family: 'Great Vibes', cursive;
+      margin: 0;
+      padding: 0;
+      height: 150vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container1 {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 800px;
+      width: 90%;
+      z-index: 10;
+      position: relative;
+    }
+
+    .glowing-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5em;
+      color: #ff007f;
+      text-shadow:
+        0 0 5px #ff007f,
+        0 0 10px #ff007f,
+        0 0 20px #ff007f,
+        0 0 40px rgba(255, 0, 127, 0.7);
+      margin-bottom: 40px;
+      animation: pulseGlow 2s infinite alternate;
+    }
+     @media screen and (max-width:600px)
+     {
+      
+     }
+
+    @keyframes pulseGlow {
+      from {
+        text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px rgba(255, 0, 127, 0.7);
+      }
+      to {
+        text-shadow: 0 0 8px #ff007f, 0 0 15px #ff007f, 0 0 30px #ff007f, 0 0 60px rgba(255, 0, 127, 0.9);
+      }
+    }
+
+    #quoteBox {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8em;
+      color: #555;
+      line-height: 1.4;
+      font-weight: 700;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid #ff007f;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+    }
+
+    button {
+      background-color: #ff007f;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: white;
+      border-radius: 30px;
+      box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      margin: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #e6006e;
+    }
+
+    #glow-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      background-color: rgba(255, 105, 180, 0.7);
+      border-radius: 50%;
+      animation: particleAnimation linear infinite;
+      opacity: 0;
+    }
+
+    .particle.small { width: 5px; height: 5px; }
+    .particle.medium { width: 8px; height: 8px; }
+    .particle.large { width: 12px; height: 12px; }
+
+    @keyframes particleAnimation {
+      0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translate(var(--end-x), var(--end-y)) scale(1.5);
+        opacity: 0;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+  .glowing-text {
+    font-size: 2.8em;
+  }
+
+  #quoteBox {
+    font-size: 1.5em;
+    padding: 25px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  .container1 {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .glowing-text {
+    font-size: 2.2em;
+  }
+
+  #quoteBox {
+    font-size: 1.3em;
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1em;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <h1 class="glowing-text">Welcome My Panduu💕🫣💐 <p>To LUNAAR'S Site</p><p>Hope you are well and fine </p>
+    💖</h1>
+    <div id="quoteBox">Click the buttons to see a quote or shayari... 💘</div>
+    <button id="quoteBtn">Show  Quote 💌</button>
+    <button id="shayariBtn">Show Shayari 💖</button>
+  </div>
+
+  <div id="glow-particles"></div>
+
+  <script>
+    const quotes = [
+        "Pandu💕",
+      "Millions of Girls, but you are my favorite. 💕",
+      "I didn’t choose you, my heart did. ❤️",
+      "You’re the one I’ve been waiting for my whole life. 💘",
+      "With you, forever won’t be too long. 💍",
+      "I want to be your last everything. 💞",
+      "You are my today and all of my tomorrows. 🌟",
+      "Will you make me the happiest person alive? 💖",
+      "I promise to love you more every single day. 🌹",
+      "You are the sunshine that lights up my world. ☀️",
+      "Loving you is like breathing — I just can't stop. 🌬️",
+      "You complete me in ways I never knew I needed. 💑",
+      "Your smile is my favorite sunrise. 🌅",
+      "Forever is not long enough with you. ⏳",
+      "You're the poetry my heart will always write. 📝",
+      "The best part of me is you. 💕",
+      "My love for you grows stronger every moment. 🌸",
+      "With you, I've found my forever. 💍",
+      "The End Click Buttons again 🥰",
+      "Aagr issy bura laga ho to maaf kar dena",
+      "apnay pusha tha miss keya",
+      "yai raha saboot kitna miss keya apko",
+      "har din ak cheez likhta tha",
+      "jab jab yaad aati the kuch na kuch likhta tha",
+      "Thank You So Much",
+      "Hope You understand",
+      "aagar bura laga ho toh maaf kar dena",
+      "Thanks 💕Once again itna time nikalnay kay liya",
+    ];
+
+    const shayari = [
+        "Pandu 💕",
+    " Dil ki zid ho tum warna🙈",
+        "In aankhon ne bohat log dekhe hain🙊",
+
+"Har dil ke muqaddar mein mohabbat nahi hoti🤨",
+"Har shakhs se har shakhs wafa bhi nahi karta🫤",
+
+"Tum se hi thi, tum se hi hai🫣",
+"Mohabbat jo thi, 💞mohabbat jo ha💕",
+
+"Pehle pyaar karta hai, phir iqraar karta hai🫠",
+"Mohabbat bhi insaan ik baar karta hai😉🩵",
+
+"Hum to jeete hain is duniya mein teri mohabbat ke liye😘",
+"Warna is duniya mein mujhe koi dilchaspi nahi😏",
+
+"Aur kya chahiye tumhein meri mohabbat ka saboot🙄",
+"Mujhe to tumhare naam ke log bhi achhe lagte hain💘",
+
+"Hum mohabbat ke naam se bhi anjaan the🧐",
+"Ek shakhs ki chahat ne humein paagal bana diya🥰",
+
+"Aur kya chahte ho is dil mein maqam apna🤔",
+"Keh to diya hai meri kul kainaat ho tum🌍",
+
+"Kaun kehta hai mohabbat ki zubaan hoti hai🙈",
+"Yeh haqeeqat to nigahon se bayan hoti hai💕",
+ "The End Click Buttons again 🥰",
+      "Aagr issy bura laga ho to maaf kar dena",
+      "apnay pusha tha miss keya",
+      "yai raha saboot kitna miss keya apko",
+      "har din ak cheez likhta tha ",
+      "jab jab yaad aati the kuch na kuch likhta tha",
+      "Thank You So Much",
+      "Hope You understand",
+      "aagar bura laga ho toh maaf kar dena",
+      "Thanks 💕Once again itna time nikalnay kay liya",
+    ];
+
+    let currentQuote = 0;
+    let currentShayari = 0;
+
+    function showQuote() {
+      const box = document.getElementById('quoteBox');
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.innerHTML = quotes[currentQuote];
+        box.style.opacity = 1;
+        currentQuote = (currentQuote + 1) % quotes.length;
+      }, 150);
+    }
+
+    function showShayari() {
+      const box = document.getElementById('quoteBox');
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.innerHTML = shayari[currentShayari];
+        box.style.opacity = 1;
+        currentShayari = (currentShayari + 1) % shayari.length;
+      }, 150);
+    }
+
+    document.getElementById('quoteBtn').addEventListener('click', showQuote);
+    document.getElementById('shayariBtn').addEventListener('click', showShayari);
+
+    // Particles
+    document.addEventListener('DOMContentLoaded', () => {
+      const glowParticlesContainer = document.getElementById('glow-particles');
+      const numberOfParticles = 30;
+
+      for (let i = 0; i < numberOfParticles; i++) {
+        createParticle();
+      }
+
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        const sizes = ['small', 'medium', 'large'];
+        particle.classList.add(sizes[Math.floor(Math.random() * sizes.length)]);
+
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+
+        particle.style.left = `${startX}px`;
+        particle.style.top = `${startY}px`;
+
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * 5;
+
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `${delay}s`;
+
+        const endX = (Math.random() - 0.5) * window.innerWidth * 0.5;
+        const endY = (Math.random() - 0.5) * window.innerHeight * 0.5;
+
+        particle.style.setProperty('--end-x', `${endX}px`);
+        particle.style.setProperty('--end-y', `${endY}px`);
+
+        glowParticlesContainer.appendChild(particle);
+
+        particle.addEventListener('animationend', () => {
+          particle.remove();
+          createParticle();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
